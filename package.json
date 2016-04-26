@@ -1,0 +1,19 @@
+{
+  "name": "fxxk-wechat-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehe888/fxxk-wechat-api.git"
+  },
+  "author": "eric.leihe@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ehe888/fxxk-wechat-api/issues"
+  },
+  "homepage": "https://github.com/ehe888/fxxk-wechat-api#readme"
+}
