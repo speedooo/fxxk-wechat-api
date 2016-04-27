@@ -4,7 +4,7 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require should --reporter spec --check-leaks"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/ehe888/fxxk-wechat-api/issues"
   },
-  "homepage": "https://github.com/ehe888/fxxk-wechat-api#readme"
+  "homepage": "https://github.com/ehe888/fxxk-wechat-api#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "expect": "^1.18.0",
+    "express": "^4.13.4",
+    "mocha": "^2.4.5",
+    "should": "^8.3.1",
+    "supertest": "^1.2.0"
+  }
 }
