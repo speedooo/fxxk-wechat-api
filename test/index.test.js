@@ -20,6 +20,31 @@ let fxxkWechat = require("../lib");
 
 fxxkWechat(wechat, { });
 
+describe("参数有效性", function(){
+  it("授权接口的state参数长度应该小于128个字节", function(done){
+    var wrongState = "";
+    for(var i = 0; i < 129; i++){
+      wrongState += "a";
+    }
+    console.log(wrongState);
+
+    request(app)
+      .get('/wechat/connect/oauth2/authorize')
+      .query({
+        appid: "abc1234567890"
+         , redirect_uri: "http://wwww.baidu.com"
+         , response_type: "code"
+         , scope : "snsapi_userinfo" /* snsapi_base or snsapi_userinfo */
+         , state : wrongState
+      })
+      .expect(500)
+      .expect(function(res){
+        console.log(res.body);
+      })
+      .end(done);
+  });
+});
+
 describe("微信授权模拟API-非静默授权", function(){
   it("应该返回授权网页", function(done){
     request(app)
